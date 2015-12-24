@@ -16,6 +16,10 @@ transformed parameters{
     theta[j] <- mu + tau*eta[j];
 }
 
+hyper parameters {
+  real lambda;
+}
+
 model{
   eta ~ normal(0,1);
   y ~ normal(theta,sigma);
