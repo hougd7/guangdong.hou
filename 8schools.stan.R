@@ -20,6 +20,10 @@ hyper parameters {
   real lambda;
 }
 
+branch parameters{
+  real epsilon;
+}
+
 model{
   eta ~ normal(0,1);
   y ~ normal(theta,sigma);
