@@ -24,6 +24,10 @@ branch parameters{
   real epsilon;
 }
 
+terminal parameters{
+  real eta;
+}
+
 model{
   eta ~ normal(0,1);
   y ~ normal(theta,sigma);
