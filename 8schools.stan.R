@@ -4,7 +4,7 @@ data{
   real<lower=0> sigma[J]; // s.e. of effect estimates
 }
 
-parameters {
+parameters{
   real mu;
   real<lower=0> tau;
   real eta[J];
@@ -16,17 +16,17 @@ transformed parameters{
     theta[j] <- mu + tau*eta[j];
 }
 
-hyper parameters {
-  real lambda;
-}
+//hyper parameters{
+//  real lambda;
+//}
 
-branch parameters{
-  real epsilon;
-}
+//branch parameters{
+//  real epsilon;
+//}
 
-terminal parameters{
-  real eta;
-}
+//terminal parameters{
+//  real eta;
+//}
 
 model{
   eta ~ normal(0,1);
